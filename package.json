@@ -31,5 +31,11 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    // ...
+    // ...
+    // This tells npm not to install everything, instead of only the dev dependencies, and to run our install and build commands on push
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   }
 }
